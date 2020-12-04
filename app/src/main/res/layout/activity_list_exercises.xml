@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightGreen"
+    tools:context=".ListExercises">
+
+    <TextView
+        android:id="@+id/title"
+        android:text="Yoga Exercise"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:lineSpacingExtra="8dp"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/subtitlepage2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:text="All Levels Beginners"
+        android:textColor="#4C5067"
+        android:textSize="20sp"
+        android:layout_below="@+id/title"/>
+
+    <View
+        android:id="@+id/divpage"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="20dp"
+        android:background="#25293E"
+        android:layout_below="@+id/subtitlepage2"
+        />
+
+    <TextView
+        android:id="@+id/intropage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:lineSpacingExtra="8dp"
+        android:text="Introduction"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:layout_below="@+id/divpage"/>
+
+    <TextView
+        android:id="@+id/subIntropage"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:lineSpacingExtra="8dp"
+        android:text="The text dummy could help anyone to know the types of yoga"
+        android:textColor="#4C5067"
+        android:textSize="17sp"
+        android:layout_below="@+id/intropage"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_ex"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/subIntropage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fab_btn"
+        android:layout_margin="16dp"
+        android:theme="@style/Theme.AppCompat"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_home_black_24dp"
+        app:fabSize="normal"
+        android:backgroundTint="@color/pink"
+        app:elevation="6dp"/>
+
+</RelativeLayout>

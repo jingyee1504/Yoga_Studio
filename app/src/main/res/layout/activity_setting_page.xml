@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/settingbg"
+    tools:context=".SettingPage">
+
+    <ToggleButton
+        android:id="@+id/switchAlarm"
+        android:layout_centerHorizontal="true"
+        android:textOn="On"
+        android:textOff="Off"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TimePicker
+        android:id="@+id/timePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"/>
+
+    <TextView
+        android:id="@+id/tvMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mode"
+        android:textSize="30dp"
+        android:textColor="#000000"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/timePicker"/>
+
+    <TextView
+        android:id="@+id/tvSubMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*Select Your Preffered Mode"
+        android:textSize="15dp"
+        android:textColor="#ff0800"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/tvMode"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:padding="16dp"
+        android:layout_margin="8dp"
+        app:cardElevation="4dp"
+        android:layout_below="@+id/tvSubMode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioGroup
+            android:id="@+id/rGroup"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rdEasy"
+                android:text="Easy"
+                android:textSize="18dp"
+                android:layout_weight="1"
+                android:theme="@style/MyRadioButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+            <RadioButton
+                android:id="@+id/rdMedium"
+                android:text="Medium"
+                android:textSize="18dp"
+                android:layout_weight="1"
+                android:theme="@style/MyRadioButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+            <RadioButton
+                android:id="@+id/rdHard"
+                android:text="Hard"
+                android:textSize="18dp"
+                android:layout_weight="1"
+                android:theme="@style/MyRadioButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+        </RadioGroup>
+
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:id="@+id/bgButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="0dp"
+        android:background="#4d3e82"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="9dp"
+        android:lineSpacingExtra="8dp"
+        android:text="SAVE"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
